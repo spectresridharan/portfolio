@@ -19,7 +19,7 @@ export default function AboutSection() {
             <div className="absolute inset-0 bg-eng-accent-cyan/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-700 pointer-events-none" />
             
             <img 
-              src="/profile.png" 
+              src="/profile.jpg" 
               alt="Sridharan S" 
               className="w-full h-full object-cover grayscale-[0.8] group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
             />
