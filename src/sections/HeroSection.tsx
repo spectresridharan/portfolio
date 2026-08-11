@@ -88,7 +88,7 @@ export default function HeroSection() {
               <span className="text-[10px] tracking-widest text-eng-gray uppercase">Coding Problems</span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="text-2xl font-mono text-eng-light">8.75</span>
+              <span className="text-2xl font-mono text-eng-light">8.68</span>
               <span className="text-[10px] tracking-widest text-eng-gray uppercase">CGPA</span>
             </div>
             <div className="flex flex-col gap-1">

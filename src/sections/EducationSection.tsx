@@ -46,7 +46,7 @@ export default function EducationSection() {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-eng-gray tracking-widest text-[10px]">CGPA</span>
-                  <span className="text-eng-accent-cyan">8.75 <span className="text-[10px] text-eng-gray">(up to Sem IV)</span></span>
+                  <span className="text-eng-accent-cyan">8.68 <span className="text-[10px] text-eng-gray">(up to Sem IV)</span></span>
                 </div>
               </div>
             </div>
