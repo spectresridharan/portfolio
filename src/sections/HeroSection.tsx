@@ -108,7 +108,7 @@ export default function HeroSection() {
           >
             {/* Actual photo */}
             <img
-              src="/profile.jpg"
+              src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt="Sridharan S"
               className="w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105"
             />
