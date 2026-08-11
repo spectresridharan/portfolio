@@ -20,7 +20,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section id="hero" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden px-6 md:px-16 lg:px-24 py-24">
+    <section id="hero" className="relative w-full min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-20 py-24">
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none" />
       
@@ -41,10 +41,10 @@ export default function HeroSection() {
         </Canvas>
       </div>
       
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-16 mt-8 md:mt-0">
+      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-8 mt-8 md:mt-0">
         
         {/* Left Content */}
-        <div className="w-full lg:w-[55%] flex flex-col items-start justify-center gap-8 mix-blend-difference">
+        <div className="w-full lg:w-[52%] flex flex-col items-start justify-center gap-8 mix-blend-difference">
           <h1 
             ref={headingRef}
             className="text-[12vw] lg:text-[6.5rem] font-bold tracking-tighter leading-[0.85] uppercase"
@@ -99,25 +99,26 @@ export default function HeroSection() {
         </div>
 
         {/* Right Content - Photo */}
-        <div className="w-full lg:w-[45%] flex justify-center lg:justify-end">
+        <div className="w-full lg:w-[48%] flex justify-center lg:justify-center lg:pl-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
-            className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-eng-accent-cyan/40 shadow-[0_0_40px_rgba(0,240,255,0.2),0_0_80px_rgba(0,240,255,0.1)] group"
+            className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] rounded-full overflow-hidden border-2 border-eng-accent-cyan/40 shadow-[0_0_40px_rgba(0,240,255,0.25),0_0_100px_rgba(0,240,255,0.12)] group flex-shrink-0"
           >
             {/* Actual photo */}
             <img
               src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt="Sridharan S"
-              className="w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover object-center transition-all duration-500 group-hover:scale-105"
+              style={{ objectPosition: '50% 15%' }}
             />
 
             {/* Subtle cyan tint on hover only */}
             <div className="absolute inset-0 bg-eng-accent-cyan/0 group-hover:bg-eng-accent-cyan/5 transition-colors duration-500 pointer-events-none z-10" />
 
             {/* Spinning dashed ring outside */}
-            <div className="absolute -inset-2 rounded-full border border-dashed border-eng-accent-cyan/30 animate-[spin_20s_linear_infinite] pointer-events-none" />
+            <div className="absolute -inset-3 rounded-full border border-dashed border-eng-accent-cyan/30 animate-[spin_20s_linear_infinite] pointer-events-none" />
           </motion.div>
         </div>
       </div>
