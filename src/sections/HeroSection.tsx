@@ -104,14 +104,20 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
-            className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-eng-gray/20 shadow-[0_0_30px_rgba(0,240,255,0.15)] group mix-blend-plus-lighter"
+            className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-eng-accent-cyan/40 shadow-[0_0_40px_rgba(0,240,255,0.2),0_0_80px_rgba(0,240,255,0.1)] group"
           >
-            <div className="absolute inset-0 bg-eng-accent-cyan/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
-            <img src="/profile.jpg" alt="Sridharan S" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100" />
-            
-            {/* Tech frame around avatar */}
-            <div className="absolute top-0 left-0 w-full h-full rounded-full border border-dashed border-eng-accent-cyan/30 animate-[spin_20s_linear_infinite]" />
-            <div className="absolute top-2 left-2 w-[calc(100%-16px)] h-[calc(100%-16px)] rounded-full border border-eng-accent-cyan/10" />
+            {/* Actual photo */}
+            <img
+              src="/profile.jpg"
+              alt="Sridharan S"
+              className="w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105"
+            />
+
+            {/* Subtle cyan tint on hover only */}
+            <div className="absolute inset-0 bg-eng-accent-cyan/0 group-hover:bg-eng-accent-cyan/5 transition-colors duration-500 pointer-events-none z-10" />
+
+            {/* Spinning dashed ring outside */}
+            <div className="absolute -inset-2 rounded-full border border-dashed border-eng-accent-cyan/30 animate-[spin_20s_linear_infinite] pointer-events-none" />
           </motion.div>
         </div>
       </div>
